@@ -21,12 +21,8 @@ def character_dict_to_list(dict):
             "char": item,
             "num": dict[item]
         })
-    character_list.sort(reverse=True, key=sort_on)
+    character_list.sort(reverse=True, key=lambda item: item["num"])
     return character_list
-
-def sort_on(items):
-    # This is a helper allowing the character dictionaries to be sorted within their list
-    return items["num"]
 
 def print_alpha_report(character_list):
     # Prints the alpha characters to the console
